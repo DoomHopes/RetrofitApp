@@ -1,12 +1,12 @@
 package com.doomhopes.retrofitapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.doomhopes.retrofitapp.models.Articles;
 import com.doomhopes.retrofitapp.models.ResponseModel;
@@ -58,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         for(Articles a: articleList){
-            String text = a.getTitle() + "\n" + a.getAuthor() + "\n" + a.getDescription() + "\n" + a.getPublishedAt()
-                    + "\n" + a.getUrl();
-            textView.setText(text);
+            textView.append(a.getTitle() + "\n" + a.getAuthor() + "\n" + a.getDescription() + "\n" + a.getPublishedAt()
+                    + "\n" + a.getUrl());
         }
     }
 }
