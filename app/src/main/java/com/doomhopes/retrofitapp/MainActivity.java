@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         //retrofit
         final ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<ResponseModel> call = apiService.getLatestNews("techcrunch",API_KEY);
+        Call<ResponseModel> call = apiService.getLatestNews("Independent",API_KEY);
 
         call.enqueue(new Callback<ResponseModel>() {
             @Override
